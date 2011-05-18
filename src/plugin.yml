@@ -1,15 +1,14 @@
 name: PrivatChat
 main: de.gwarband.privatchat.PrivatChat
 version: 0.2
-description:
+author: GWarBand
+description: Make a chat
 commands:
    PChat:
-     description: xyz
-     aliases:
+     description: make a chat with a player
      usage: /<command> <player>
    ChatExit:
-     description: xyz
-     aliases:
+     description: exit the chat
      usage: /<command>
    BM:
      description: send a global message
