@@ -27,14 +27,14 @@ public class PrivatChatPlayerListener extends PlayerListener
 	
 	public void onPlayerChat(PlayerChatEvent event)
 	{
-	  Player player = event.getPlayer();
-	  if(plugin.conservationopen.get(player.getName().toLowerCase()))
-	  {
-		String message = event.getMessage();
-	    event.setCancelled(true);
-	    Player player2 = plugin.conservation.get(player.getName().toLowerCase());
-	    player.sendMessage(ChatColor.BLUE+"[PrivatChat] "+player.getName()+" => "+player2.getName()+": "+ChatColor.WHITE+message);
-	    player2.sendMessage(ChatColor.BLUE+"[PrivatChat] "+player.getName()+": "+ChatColor.WHITE+message);
-	  }
+		Player player = event.getPlayer();
+		if(plugin.conservationopen.get(player.getName().toLowerCase()))
+		{
+			String message = event.getMessage();
+			event.setCancelled(true);
+			Player player2 = plugin.conservation.get(player.getName().toLowerCase());
+			player.sendMessage(ChatColor.BLUE+"[PrivatChat] "+player.getName()+" => "+player2.getName()+": "+ChatColor.WHITE+message);
+			player2.sendMessage(ChatColor.BLUE+"[PrivatChat] "+player.getName()+": "+ChatColor.WHITE+message);
+		}
 	}
 }
